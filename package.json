@@ -1,13 +1,17 @@
 {
   "name": "ht-ui-component",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "files": ["dist", "packages"],
+  "style": "dist/htui.css",
+  "main": "packages/index.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:e2e": "vue-cli-service test:e2e",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit",
+    "lib": "vue-cli-service build --target lib --name htui --dest dist packages/index.js"
   },
   "dependencies": {
     "core-js": "^3.6.4",
@@ -23,6 +27,7 @@
     "@vue/eslint-config-standard": "^5.1.2",
     "@vue/test-utils": "1.0.0-beta.31",
     "babel-eslint": "^10.1.0",
+    "babel-plugin-component": "^1.1.1",
     "chai": "^4.1.2",
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.20.2",
